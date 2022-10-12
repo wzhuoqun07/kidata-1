@@ -1,0 +1,11 @@
+@import "./colors.scss";
+
+$footer-height: 60px;
+
+.footer {
+  height: 100%;
+
+  box-shadow: $base-shadow-properties;
+
+  background-color: $color-primary;
+}

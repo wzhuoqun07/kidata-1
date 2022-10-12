@@ -1,0 +1,21 @@
+@import "./colors.scss";
+
+$container-padding: 40px;
+
+#navbar-container {
+  height: 160px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: $container-padding;
+}
+
+.navbar {
+  height: 100%;
+
+  border-radius: 10px;
+  box-shadow: $base-shadow-properties;
+
+  background-color: $color-primary;
+}
