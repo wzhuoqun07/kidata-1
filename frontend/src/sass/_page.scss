@@ -1,0 +1,27 @@
+@use "footer";
+
+// flexbox to handle body content sizing:
+.page-container {
+  display: flex;
+  flex-flow: column;
+
+  min-height: 100vh;
+}
+
+// TODO: consider if these be classes or ids:
+.page-container #header {
+  flex: 0 1 auto;
+}
+
+.page-container #content {
+  flex: 1 1 auto;
+}
+
+.page-container #footer {
+  flex: 0 1 footer.$footer-height;
+}
+
+// home page:
+.home {
+  // TODO
+}

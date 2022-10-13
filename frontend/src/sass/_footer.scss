@@ -1,0 +1,9 @@
+@use "base";
+
+$footer-height: 60px;
+
+.footer {
+  @include base.primary-box;
+  
+  height: 100%;
+}

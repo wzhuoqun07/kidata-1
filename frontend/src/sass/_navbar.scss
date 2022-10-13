@@ -1,0 +1,19 @@
+@use "base";
+
+$container-padding: 40px;
+
+#navbar-container {
+  height: 160px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: $container-padding;
+}
+
+.navbar {
+  @include base.primary-box;
+
+  height: 100%;
+  border-radius: 10px;
+}
