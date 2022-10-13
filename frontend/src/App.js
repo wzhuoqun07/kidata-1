@@ -1,4 +1,4 @@
-import PageLayout from "./pages/PageLayout.js"
+import PageLayout from "./pages/PageLayout"
 
 import "./sass/main.scss"
 
