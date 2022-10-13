@@ -1,4 +1,4 @@
-@import "./footer.scss";
+@use "footer";
 
 // flexbox to handle body content sizing:
 .page-container {
@@ -18,7 +18,7 @@
 }
 
 .page-container #footer {
-  flex: 0 1 $footer-height;
+  flex: 0 1 footer.$footer-height;
 }
 
 // home page:

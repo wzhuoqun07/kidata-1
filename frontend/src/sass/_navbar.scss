@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@use "base";
 
 $container-padding: 40px;
 
@@ -12,10 +12,8 @@ $container-padding: 40px;
 }
 
 .navbar {
+  @include base.primary-box;
+
   height: 100%;
-
   border-radius: 10px;
-  box-shadow: $base-shadow-properties;
-
-  background-color: $color-primary;
 }
