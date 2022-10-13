@@ -10,6 +10,6 @@ body {
 	
 	background-color: skyblue;
 	/* gradient styling: */
-	background-image: linear-gradient(to left top, skyblue, deepskyblue);
+	background-image: linear-gradient(skyblue, deepskyblue);
 	background-attachment: fixed;
 }
