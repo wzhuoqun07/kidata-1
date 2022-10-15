@@ -1,6 +1,7 @@
 @use "base";
+@use "page";
 
-$container-padding: 40px;
+$container-padding: 35px;
 
 #navbar-container {
   height: 160px;
@@ -8,12 +9,24 @@ $container-padding: 40px;
 
   box-sizing: border-box;
 
-  padding: $container-padding;
+  padding: $container-padding page.$page-horizontal-margin;
 }
 
 .navbar {
   @include base.primary-box;
+  @include base.rounding;
+
+  box-sizing: border-box;
+  padding: 15px;
 
   height: 100%;
-  border-radius: 10px;
+}
+
+// logo:
+.logo {
+  
+}
+
+.navbar .links {
+
 }
