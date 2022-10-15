@@ -2,3 +2,17 @@
 @import "page";
 @import "navbar";
 @import "footer";
+
+@import "fonts";
+
+body { @include hind }   
+
+p { 
+    @include hind;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include montserrat;
+    margin: 0;
+}
