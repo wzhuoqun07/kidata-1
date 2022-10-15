@@ -1,3 +1,7 @@
+# Build command: 
+#   docker build -t raseen3:kidata-frontend .
+# run in frontend directory
+
 FROM node:18-alpine3.15
 # this is the base image to pull from
 
@@ -5,8 +9,8 @@ FROM node:18-alpine3.15
 WORKDIR /app
 
 # Install app dependencies
-COPY package*.json .
-RUN npm install
+# COPY package*.json .
+# RUN npm install --no-bin-links
 
 # Bundle app source
 COPY . .
