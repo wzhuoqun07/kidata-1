@@ -1,9 +1,18 @@
 @use "base";
 
-$footer-height: 60px;
+$footer-height: 70px;
 
 .footer {
   @include base.primary-box;
-  
+
   height: 100%;
+  
+  padding: 0 20px;
+}
+
+.footer .copyright {
+  padding: 1em 0;
+  display: inline-block;
+
+  opacity: 50%;
 }
