@@ -1,10 +1,27 @@
+
 $color-primary: lightgreen;
-$color-secondary: skyblue;
+$text-color-primary: black;
+
+$color-secondary: lighten(gold, 20%);
+$text-color-secondary: $text-color-primary;
+
+$color-background: skyblue;
 
 $base-shadow-properties: rgba(0, 0, 0, 0.8) 0px 0px 4px;
 
 // what kinds of mixins would be useful?:
+@mixin rounding { border-radius: 6px }
+@mixin shadow { box-shadow: $base-shadow-properties }
+
 @mixin primary-box {
+    @include shadow;
+
+    color: $text-color-primary;
     background-color: $color-primary;
-    box-shadow: $base-shadow-properties;
+}
+@mixin secondary-box {
+    @include shadow;
+
+    color: $text-color-secondary;
+    background-color: $color-secondary;
 }
