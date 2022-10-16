@@ -1,66 +1,113 @@
 import com.github.javafaker.Faker;
 import database.*;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.sql.SQLException;
 import java.util.Random;
 
 public class App {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        MySQLManipulation mySQLManipulation = new MySQLManipulation();
-        modifyTable("user", "insert", mySQLManipulation);
+    private static final String[] TABLES = {"user", "feedback", "lesson", "subject", "user_history"};
+    private static final String[] OPERATIONS = {"insert", "delete", "update"};
+
+    public static void main(String[] args) throws SQLException {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        context.registerShutdownHook();
+        MySQLManipulation mySQLManipulation = (MySQLManipulation) context.getBean("mySQLManipulation");
+        modifyTable(TABLES[0], OPERATIONS[0], mySQLManipulation);
         mySQLManipulation.close();
     }
 
     public static void modifyTable(String name, String mode, MySQLManipulation mySQLManipulation) {
+        switch (name){
+            case "user" -> modifyUser(mode, mySQLManipulation);
+            case "feedback" -> modifyFeedback(mode, mySQLManipulation);
+            //case "lesson" -> modifyLesson(mode, mySQLManipulation);
+            //case "subject" -> modifySubject(mode, mySQLManipulation);
+            //case "user_history" -> modifyUserHistory(mode, mySQLManipulation);
+
+            default -> throw new IllegalStateException("Unexpected value: " + mode);
+        }
+    }
+
+    private static void modifyFeedback(String mode, MySQLManipulation mySQLManipulation) {
+        String[] col = {"id", "lesson_id", "description"};
         switch (mode) {
             case "insert" -> {
-                String[] col = {"uid", "login", "password", "first_name", "last_name", "age", "email"};
                 try {
                     for (int i = 0; i < 100; i++) {
-                        mySQLManipulation.insert(name, col, randomTable(name), null);
+                        mySQLManipulation.insert("feedback", col, randomVals("feedback"), null);
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
             case "delete" -> {
-                String[] col = {"uid", "login", "password", "first_name", "last_name", "age", "email"};
-                String[] val = {"3", "login123", "password123", "first_name123", "last_name123", "12", "email123"};
                 try {
-                    mySQLManipulation.delete(name, col, val, null);
+                    mySQLManipulation.delete("feedback", col[0], new String[]{"1"}, null);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
             case "update" -> {
-                String[] col = {"login", "password", "first_name", "last_name", "age", "email"};
-                String[] val = {"login12", "password3", "first_name23", "last_name123", "8", "aaa@outlook.com"};
-                String[] col2 = {"uid"};
-                String[] val2 = {"3"};
-                try {
-                    mySQLManipulation.update(name, col, val, col2, val2, null);
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+
             }
             default -> throw new IllegalStateException("Unexpected value: " + mode);
         }
     }
 
-    public static String[] randomTable(String name) {
-        String[] emails = {"@gmail.com", "@outlook.com", "@yahoo.com", "hotmail.com"};
-        if (name.equals("user")) {
-            String uid = String.valueOf((int) (Math.random() * 100000));
-            String login = randomString(10);
-            String password = randomString(10);
-            String firstName = new Faker().name().firstName();
-            String lastName = new Faker().name().lastName();
-            String email = randomString(10);
-            String age = String.valueOf((int) ((Math.random() * 6) + 6));
-            return new String[]{uid, login, password, firstName.replace("'",""),
-                    lastName.replace("'",""), age,
-                    email + emails[new Random().nextInt(emails.length)]};
+    public static void modifyUser(String mode, MySQLManipulation mySQLManipulation) {
+        String[] col = {"uid", "login", "password", "first_name", "last_name", "age", "email"};
+        switch (mode) {
+            case "insert" -> {
+                try {
+                    for (int i = 0; i < 100; i++) {
+                        mySQLManipulation.insert("user", col, randomVals("user"), null);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            case "delete" -> {
+                try {
+                    mySQLManipulation.delete("user", col[0],
+                            new String[]{"13386", "40687"}, null);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            case "update" -> {
+
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + mode);
         }
-        return null;
+    }
+
+    public static String[] randomVals(String name) {
+        String[] emails = {"@gmail.com", "@outlook.com", "@yahoo.com", "hotmail.com"};
+        switch (name) {
+            case "user" -> {
+                return new String[]{String.valueOf((int) (Math.random() * 100000)), randomString(10),
+                        randomString(10), new Faker().name().firstName().replace("'",""),
+                        new Faker().name().lastName().replace("'",""),
+                        String.valueOf((int) ((Math.random() * 6) + 6)),
+                        randomString(10) + emails[new Random().nextInt(emails.length)]};
+            }
+            case "feedback" -> {
+                return new String[]{String.valueOf((int) (Math.random() * 100000)),
+                        String.valueOf((int) (Math.random() * 100000)),
+                        new Faker().lorem().paragraph()};
+            }
+//            case "lesson" -> {
+//
+//            }
+//            case "subject" -> {
+//
+//            }
+//            case "user_history" -> {
+//
+//            }
+            default -> throw new IllegalStateException("Unexpected value: " + name);
+        }
     }
 
     public static String randomString(int length) {

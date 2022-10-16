@@ -10,7 +10,7 @@ public class MySQLManipulation {
     // modify this to your own database
     private final String url = "jdbc:mysql://localhost:3306/kidata";
     private final String username = "root";
-    private final String password = "Zsl020210#";
+    private final String password = "*********";
     private Connection c;
 
     public MySQLManipulation() throws ClassNotFoundException {
@@ -48,26 +48,29 @@ public class MySQLManipulation {
         if (tcl != null) {
             sql.append(" ").append(tcl);
         }
+        sql.append(";");
         c.createStatement().execute(sql.toString());
     }
 
-    public void delete(String name, String @NotNull [] cols, String[] vals, String tcl) throws SQLException {
-        StringBuilder sql = new StringBuilder("DELETE FROM " + name + " WHERE ");
-        for (int i = 0; i < cols.length; i++) {
-            sql.append(cols[i]).append(" = '").append(vals[i]).append("'");
-            if (i != cols.length - 1) {
-                sql.append(" AND ");
+    public void delete(String name, String col, String[] vals, String tcl) throws SQLException {
+        StringBuilder sql = new StringBuilder("DELETE FROM " + name + " WHERE " + col + " IN (");
+        for (int i = 0; i < vals.length; i++) {
+            sql.append(vals[i]);
+            if (i != vals.length - 1) {
+                sql.append(", ");
             }
         }
+        sql.append(")");
         if (tcl != null) {
             sql.append(" ").append(tcl);
         }
+        sql.append(";");
         c.createStatement().execute(sql.toString());
     }
 
     public void update(String name, String[] cols, String[] vals, String[] cols2, String[] vals2,
                        String tcl) throws SQLException {
-        StringBuilder sql = new StringBuilder("UPDATE " + name + " SET ");
+        StringBuilder sql = new StringBuilder("UPDATE IGNORE" + name + " SET ");
         for (int i = 0; i < cols.length; i++) {
             sql.append(cols[i]).append(" = '").append(vals[i]).append("'");
             if (i != cols.length - 1) {
@@ -84,6 +87,7 @@ public class MySQLManipulation {
         if (tcl != null) {
             sql.append(" ").append(tcl);
         }
+        sql.append(";");
         c.createStatement().execute(sql.toString());
     }
 
@@ -108,6 +112,7 @@ public class MySQLManipulation {
         if (tcl != null) {
             sql.append(" ").append(tcl);
         }
+        sql.append(";");
         c.createStatement().execute(sql.toString());
     }
 
