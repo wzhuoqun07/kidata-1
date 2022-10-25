@@ -1,5 +1,5 @@
 import com.github.javafaker.Faker;
-import database.*;
+import old.MySQLManipulation;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;

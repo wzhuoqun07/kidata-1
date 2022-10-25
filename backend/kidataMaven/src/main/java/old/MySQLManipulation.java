@@ -1,4 +1,4 @@
-package database;
+package old;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -10,11 +10,15 @@ public class MySQLManipulation {
     // modify this to your own database
     private final String url = "jdbc:mysql://localhost:3306/kidata";
     private final String username = "root";
-    private final String password = "*********";
+    private final String password = "Zsl020210#";
     private Connection c;
 
-    public MySQLManipulation() throws ClassNotFoundException {
-        connect();
+    public MySQLManipulation() {
+        try {
+            connect();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void connect() throws ClassNotFoundException {
@@ -26,7 +30,6 @@ public class MySQLManipulation {
         } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
-
     }
 
     public void insert(String name, String @NotNull [] cols, String[] vals, String tcl) throws SQLException {
