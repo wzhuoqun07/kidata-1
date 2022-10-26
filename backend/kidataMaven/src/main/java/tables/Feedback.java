@@ -1,18 +1,24 @@
 package tables;
 
+import java.sql.Connection;
+
 public class Feedback {
     private static final String[] COLUMNS = {"id", "lesson_id", "description"};
+    private Connection c;
 
-    public String insert() {
-        return null;
+    public Feedback(Connection c) {
+        this.c = c;
     }
 
-    public String delete() {
-        return null;
+    public void insert() {
     }
 
-    public String update() {
-        return null;
+    public void delete() {
+
+    }
+
+    public void update() {
+
     }
 
     public boolean check()  {

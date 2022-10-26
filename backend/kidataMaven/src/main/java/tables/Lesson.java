@@ -1,10 +1,17 @@
 package tables;
 
+import java.sql.Connection;
+
 public class Lesson {
     private static final String[] COLUMNS = {"id", "subject_id", "name"};
 
+    private Connection c;
+
+    public Lesson(Connection c) {
+        this.c = c;
+    }
+
     public void insert() {
-        System.out.println("Lesson.insert");
     }
 
     public void delete() {
@@ -15,7 +22,11 @@ public class Lesson {
 
     }
 
-    public boolean check() {
+    public boolean check()  {
         return false;
+    }
+
+    public String[] pull() {
+        return null;
     }
 }

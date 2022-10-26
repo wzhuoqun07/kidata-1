@@ -1,21 +1,32 @@
 package tables;
 
+import java.sql.Connection;
+
 public class Slides {
-    private static final String[] COLUMNS = {};
+    private static final String[] COLUMNS = {"lesson_id", "id", "text", "image", "hint", "title"};
 
-    public String insert() {
-        return null;
+    private Connection c;
+
+    public Slides(Connection c) {
+        this.c = c;
     }
 
-    public String delete() {
-        return null;
+    public void insert() {
     }
 
-    public String update() {
-        return null;
+    public void delete() {
+
+    }
+
+    public void update() {
+
     }
 
     public boolean check()  {
         return false;
+    }
+
+    public String[] pull() {
+        return null;
     }
 }

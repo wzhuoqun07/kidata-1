@@ -1,21 +1,32 @@
 package tables;
 
+import java.sql.Connection;
+
 public class UserHistory {
     private static final String[] COLUMNS = {"id", "user_id", "start_time", "end_time"};
 
-    public String insert() {
-        return null;
+    private Connection c;
+
+    public UserHistory(Connection c) {
+        this.c = c;
     }
 
-    public String delete() {
-        return null;
+    public void insert() {
     }
 
-    public String update() {
-        return null;
+    public void delete() {
+
     }
 
-    public boolean check() {
+    public void update() {
+
+    }
+
+    public boolean check()  {
         return false;
+    }
+
+    public String[] pull() {
+        return null;
     }
 }

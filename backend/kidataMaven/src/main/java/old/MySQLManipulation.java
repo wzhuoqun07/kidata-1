@@ -10,7 +10,7 @@ public class MySQLManipulation {
     // modify this to your own database
     private final String url = "jdbc:mysql://localhost:3306/kidata";
     private final String username = "root";
-    private final String password = "Zsl020210#";
+    private final String password = "*******";
     private Connection c;
 
     public MySQLManipulation() {
