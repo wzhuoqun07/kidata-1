@@ -34,13 +34,50 @@ $page-content-margin: 20px;
 .page-card {
   @include base.secondary-box;
   @include base.rounding;
-
+  text-align: center;
   box-sizing: border-box;
   padding: $page-content-margin;
-  
   height: 100%;
+  font-size: 32px;
 }
+.search-bar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: -400px;
+  margin-right: 1150px;
+  font-size: 17px;
+}
+.search-bar input[type=submit] {
+  float: right;
+  padding: 6px;
+  display: inline-block;
+  width: 100px;
+  margin-top: -400px;
+  margin-right: 1030px;
+}
+.lesson-menu {
+  width: 600px;
+  height: 800px;
+  left: 500px;
+  top: 153px;
+  background: lightgreen;
+  border-radius: 15px;
+  font-size: 40px;
+  font-weight: bold;
 
+}
+.content {
+  float: right;
+  width: 1300px;
+  height: 800px;
+  right: 500px;
+  top: 153px;
+  background: lightgreen;
+  border-radius: 15px;
+  font-size: 50px;
+  font-weight: bold;
+}
 // home page:
 .home {
   height: 600px;

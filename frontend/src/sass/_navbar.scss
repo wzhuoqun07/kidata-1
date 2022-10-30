@@ -17,7 +17,7 @@ $container-padding: 35px;
   @include base.rounding;
 
   box-sizing: border-box;
-  padding: 15px;
+  padding: 20px;
 
   height: 100%;
 }
@@ -27,6 +27,12 @@ $container-padding: 35px;
   
 }
 
-.navbar .links {
-
+.navbar{
+  text-align: center;
+  padding: 15px 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  text-decoration-line: blink;
 }
