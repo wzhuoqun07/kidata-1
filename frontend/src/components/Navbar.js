@@ -6,8 +6,7 @@ function Navbar() {
       <div className="navbar" >
           <nav>
               <NavLink to={"/"}>Home</NavLink> {"| "}
-              <NavLink to={"/lesson"}>Lesson</NavLink> {"| "}
-              <NavLink to={"/Game"}>Game</NavLink> {"| "}
+              <NavLink to={"/Lesson"}>Lesson</NavLink> {"| "}
               <NavLink to={"/ContactUs"}>Contact Us</NavLink> {"| "}
               <NavLink to={"/Login"}>Log in</NavLink>
           </nav>
