@@ -1,5 +1,5 @@
 @use "base";
-@use "page";
+@use "pages";
 
 $container-padding: 35px;
 
@@ -9,7 +9,7 @@ $container-padding: 35px;
 
   box-sizing: border-box;
 
-  padding: $container-padding page.$page-horizontal-margin;
+  padding: $container-padding pages.$page-horizontal-margin;
 }
 
 .navbar {
