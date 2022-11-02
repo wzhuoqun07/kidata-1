@@ -1,14 +1,9 @@
-function MainPage() {
-  return (
-    <div className="home">
-      <div className="page-card">
-        <h1>Hello!</h1>
-        <p>
-          Welcome to Kidata, a kid-friendly introduction to data!
-        </p>
-      </div>
-    </div>
+import createPageBase from "../components/PageLayout";
+
+function Home() {
+  return createPageBase(
+    
   )
 }
 
-export default MainPage;
+export default Home;
