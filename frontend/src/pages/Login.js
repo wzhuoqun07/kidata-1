@@ -5,11 +5,11 @@ function Login() {
             <div className="page-card">
                 <form action='' method='Post'>
                     <section class='login'>
-                        <label for='username'>username</label>
+                        <label for='username'>Username</label>
                         <br></br>
                         <input type='text' id='username' name ='username'></input>
                         <br></br>
-                        <label for='password'>password</label>
+                        <label for='password'>Password</label>
                         <br></br>
                         <input type='password' id='password' name ='password'></input>
                     </section>

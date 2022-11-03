@@ -3,9 +3,7 @@ function MainPage() {
     <div className="home">
       <div className="page-card">
         <h1>Let's to play now!</h1>
-        <p>
-          Welcome to Kidata, a kids-friendly introduction to data!
-        </p>
+
 
       </div>
         <div className="search-bar">
