@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe81b3a6-d933-447c-bd34-8fe3588bda24" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/Feedback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/UserHistory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/MySQLManipulation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Lesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/MySQLManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/MySQLManipulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Slides.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Slides.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/AppNew.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/old/MySQLManipulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/old/MySQLManipulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Feedback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Lesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Lesson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Slides.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Slides.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/TableManipulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/UserHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GyCVZYM5UaWRP98rfmu97XNRwS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/OneDrive - Virginia Tech/Desktop/kidata",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="fe81b3a6-d933-447c-bd34-8fe3588bda24" name="变更" comment="" />
+      <created>1667351460277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667351460277</updated>
+      <workItem from="1667351461446" duration="51000" />
+      <workItem from="1667351596522" duration="2397000" />
+      <workItem from="1667437763481" duration="168000" />
+      <workItem from="1667438036871" duration="2606000" />
+      <workItem from="1667506654132" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
