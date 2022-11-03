@@ -2,7 +2,7 @@
 
 import Markdown from "markdown-to-jsx";
 
-import createPageBase from "../components/PageLayout";
+import createCardPage from "./createCardPage";
 
 const exampleMarkdownContent = `
   <center>
@@ -11,11 +11,11 @@ const exampleMarkdownContent = `
   </center>
 `
 
+
+
 function ErrorPage() {
-  return createPageBase(
-    <div className="page-card">
-      <Markdown>{exampleMarkdownContent}</Markdown>
-    </div>
+  return createCardPage(
+    <Markdown>{exampleMarkdownContent}</Markdown>
   )
 }
 

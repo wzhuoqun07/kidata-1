@@ -1,16 +1,14 @@
 import Markdown from "markdown-to-jsx";
 
-import createPageBase from "../components/PageLayout";
+import createCardPage from "./createCardPage";
 
 const exampleMarkdownContent = `
   This will soon be a fullscreen login page, but for now it's just *markdown!*
 `
 
 function LoginPage() {
-  return createPageBase(
-    <div className="page-card">
-      <Markdown>{exampleMarkdownContent}</Markdown>
-    </div>
+  return createCardPage(
+    <Markdown>{exampleMarkdownContent}</Markdown>
   )
 }
 

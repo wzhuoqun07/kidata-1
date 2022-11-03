@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 
-import createPageBase from "../components/PageLayout";
+import createCardPage from "./createCardPage";
 
 const exampleMarkdownContent = `
   # KIDATA markdown-to-jsx Demo
@@ -56,10 +56,8 @@ const exampleMarkdownContent = `
 `
 
 function Home() {
-  return createPageBase(
-    <div className="page-card">
-      <Markdown>{exampleMarkdownContent}</Markdown>
-    </div>
+  return createCardPage(
+    <Markdown>{exampleMarkdownContent}</Markdown>
   )
 }
 

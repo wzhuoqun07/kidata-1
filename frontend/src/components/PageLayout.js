@@ -3,17 +3,18 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function createPageBase(content) {
+function PageLayout() {
   return (
     <>
       <Header />
-      <Outlet />
       
       <div id="content">
-        {content}
+        <Outlet />
       </div>
       
       <Footer />
     </>
   );
 }
+
+export default PageLayout;
