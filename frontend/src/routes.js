@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home"
+import LoginPage from "./pages/LoginPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
@@ -12,7 +14,10 @@ const router = createBrowserRouter(
     <Route index element={<Home />} />,
 
     // full pages:
-    <Route path="/login" element={<div>hello!</div>} />
+    <Route path="/login" element={<LoginPage />} />,
+
+    // error:
+    <Route path="*" element={<ErrorPage />} />
   ])
 );
 
