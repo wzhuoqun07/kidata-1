@@ -1,0 +1,76 @@
+@use "base";
+@use "pages";
+
+$container-padding: 35px;
+
+// id for container -- may cause confusion?
+#header {
+  height: 160px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding-bottom: $container-padding;
+}
+
+.header-card {
+  @include base.primary-box;
+
+  box-sizing: border-box;
+  
+  padding: 10px;
+
+  height: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+
+  height: 60%;
+
+  padding: 0 10px;
+}
+
+.navbar {
+  display: flex;
+
+  height: 40%;
+}
+
+// container itself (a ul, likely):
+.navbar .links {
+  flex: 4 1 auto;
+
+  margin: 0;
+  padding: 0;
+  
+  height: 100%;
+
+  list-style-type: none;
+}
+
+.navbar .links li {
+  display: flex;
+  // TODO: should i make these mixins?:
+  align-items: center;
+  justify-content: center;
+  
+  float: left;
+
+  margin-right: 20px;
+
+  min-width: 60px;
+  padding: 0 10px;
+
+  height: 100%;
+}
+
+.navbar .current-user {
+  flex: 1 1 auto;
+}
+
+// logo:
+.logo {
+  
+}
