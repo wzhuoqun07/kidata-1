@@ -1,6 +1,5 @@
 import PageLayout from "./components/PageLayout"
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
 import "./sass/main.scss"
 import Home from "./pages/Home";
 import Lesson from "./pages/Lesson";

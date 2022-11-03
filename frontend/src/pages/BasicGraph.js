@@ -13,22 +13,22 @@ function BasicGraph() {
                     </p>
                 </div>
                 <div className="lesson-menu">
-                    <NavLink to={"/BasicGraph"}>Basic Graph</NavLink>
+                    <NavLink to={"/Lesson/BasicGraph"}>Basic Graph</NavLink>
                     <br></br>
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                     <br></br>
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                     <br></br>
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                 </div>
             </div>
 

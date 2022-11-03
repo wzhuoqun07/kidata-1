@@ -24,17 +24,17 @@ function Lesson() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                     <br></br>
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                     <br></br>
                     <br></br>
                     <br></br>
                     <br></br>
-                    <li><a href="#"><strong>???</strong></a></li>
+                    <li><a href={null}><strong>???</strong></a></li>
                 </div>
             </div>
 

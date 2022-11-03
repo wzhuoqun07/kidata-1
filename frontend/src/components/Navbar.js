@@ -17,6 +17,7 @@ function Navbar() {
     <div id="navbar-container">
       <div className="navbar" >
           <nav>
+<<<<<<< HEAD
               <NavLink style={({isActive}) => isActive ? activeStyle : inactive}
                        to={"/"} end>Home</NavLink> {"| "}
               <NavLink style={({isActive}) => isActive ? activeStyle : inactive}
@@ -25,6 +26,12 @@ function Navbar() {
                        to={"/ContactUs"}>Contact Us</NavLink> {"| "}
               <NavLink style={({isActive}) => isActive ? activeStyle : inactive}
                        to={"/Login"}>Log in</NavLink>
+=======
+              <NavLink to={"/"}>Home</NavLink> {"| "}
+              <NavLink to={"/Lesson"}>Lesson</NavLink> {"| "}
+              <NavLink to={"/ContactUs"}>Contact Us</NavLink> {"| "}
+              <NavLink to={"/Login"}>Log in</NavLink>
+>>>>>>> 3fa5c29d5ea1791afb8248ab27cde0d0bb2e3dca
           </nav>
       </div>
     </div>
