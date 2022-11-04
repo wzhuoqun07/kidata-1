@@ -4,16 +4,16 @@ function Login() {
         <div className="Login">
             <div className="page-card">
                 <form action='' method='Post'>
-                    <section class='login'>
-                        <label for='username'>Username</label>
+                    <section>
+                        <label>Username</label>
                         <br></br>
                         <input type='text' id='username' name ='username'></input>
                         <br></br>
-                        <label for='password'>Password</label>
+                        <label>Password</label>
                         <br></br>
                         <input type='password' id='password' name ='password'></input>
                     </section>
-                    <section class='submission'>
+                    <section>
                         <input type='submit' value='Submit'></input>
                     </section>
                 </form>

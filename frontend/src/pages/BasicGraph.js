@@ -1,9 +1,9 @@
 import {NavLink} from "react-router-dom";
-import React from 'react';
+import React, {useEffect} from 'react';
 
 function Content() {
     return (
-        <div className="content">
+        <div className="content" onLoad={FetchTest}>
             <h1>
                 Basic Graphs
             </h1>
@@ -43,34 +43,30 @@ function FetchTest() {
         setAge(age);
     }
 
-    const getInfo = () => {
+    useEffect(() => {
         const url = `http://localhost:8080/fetch`;
-
         fetch(url)
-        .then(response => response.json())
-            .then((({name: name1, age: age1}) => updateState(name1, age1)))
-    }
+            .then(response => response.json())
+            .then(({name: name1, age: age1}) => updateState(name1, age1))
+    }, [])
 
     return (
-        <div style={{textAlign: "center", fontFamily: "Times New Roman, Times, serif"}}>
-            <button style={{fontSize: "1vw"}} onClick={getInfo}>Get Image</button>
+        <div style={{textAlign: "center",
+            fontFamily: "Times New Roman, Times, serif"}}>
             <br/>
             <h2>Name: {name}</h2>
             <h2>Age: {age}</h2>
-
         </div>
     )
 }
 
-function BasicGraph() {
+function BasicGraph(){
     return (
         <div className="basic-graph">
             <div className="page-card">
                 <Content/>
                 <Menu/>
-
             </div>
-
         </div>
     );
 }
