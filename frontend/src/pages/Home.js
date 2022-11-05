@@ -1,7 +1,5 @@
 import Markdown from "markdown-to-jsx";
 
-import createCardPage from "./createCardPage";
-
 const exampleMarkdownContent = `
   # KIDATA markdown-to-jsx Demo
 
@@ -52,12 +50,18 @@ const exampleMarkdownContent = `
       - bullets
   
   This page also expands with the size of its children, so this markdown file
-  currently
+  currently pushes the page down a decent bit.
 `
 
 function Home() {
-  return createCardPage(
-    <Markdown>{exampleMarkdownContent}</Markdown>
+  return (
+    <>
+      <div>
+        {/* introduction? */}
+      </div>
+      <Markdown>{exampleMarkdownContent}</Markdown>
+    </>
+      
   )
 }
 
