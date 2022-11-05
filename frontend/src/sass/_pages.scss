@@ -3,8 +3,6 @@
 
 $page-horizontal-margin: 20%;
 
-$page-content-margin: 20px;
-
 // flexbox to handle body content sizing:
 .page-container {
   display: flex;
@@ -14,36 +12,16 @@ $page-content-margin: 20px;
 }
 
 // TODO: consider if these be classes or ids:
-.page-container #header {
+.page-container > .header {
   flex: 0 1 auto;
 }
 
-.page-container #content {
+.page-container > .page-content {
   flex: 1 1 auto;
 
-  margin-bottom: 40px;
-
-  margin-right: $page-horizontal-margin;
-  margin-left: $page-horizontal-margin;
+  margin: 0 $page-horizontal-margin;
 }
 
-.page-container #footer {
+.page-container > .footer {
   flex: 0 1 footer.$footer-height;
-}
-
-.page-card {
-  @include base.secondary-box;
-  @include base.rounding;
-
-  box-sizing: border-box;
-  padding: $page-content-margin;
-  
-  height: 100%;
-}
-
-// home page:
-.home {
-  height: 600px;
-
-  
 }

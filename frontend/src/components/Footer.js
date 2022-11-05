@@ -1,8 +1,11 @@
 // only place inside a div with a page-container class name:
 function Footer() {
   return (
-    <div id="footer" className="footer">
+    <div className="footer">
       <h3 className="copyright">© ISF2022</h3>
+      <ul>
+        <li>example</li>
+      </ul>
     </div>
   )
 }

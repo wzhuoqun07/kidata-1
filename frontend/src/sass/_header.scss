@@ -1,93 +1,36 @@
 @use "base";
 @use "pages";
 
-$container-padding: 35px;
-
 // id for container -- may cause confusion?
-#header {
-  height: 160px;
-  width: 100%;
+.header {
+  height: 180px;
 
   box-sizing: border-box;
-
-  padding-bottom: $container-padding;
+  padding: 20px pages.$page-horizontal-margin;
 }
 
-.header-card {
-  @include base.primary-box;
-
-  box-sizing: border-box;
-  
-  padding: 10px;
-
-  height: 100%;
-}
-
-.header-content {
-  @include base.vertically-center;
-
-  height: 60%;
-
-  padding: 0 10px;
-}
-
-.header-content > .logo {
-  margin-right: 10px;
-  
+.header #logo {
   height: 100%;
   width: auto;
 }
 
+// generally just a container for a ul:
 .navbar {
-  display: flex;
+  @include base.primary-box;
+  @include base.rounding;
 
-  height: 40%;
-}
+  float: right;
 
-// container itself (a ul, likely):
-.navbar .links {
-  flex: 4 1 auto;
+  ul {
+    @include base.vertically-center;
 
-  margin: 0;
-  padding: 0;
-  
-  height: 100%;
+    list-style-type: none;
 
-  list-style-type: none;
-}
+    padding-left: 0;
+    margin: 0;
 
-.navbar .links li {
-  @include base.vertically-center;
-  
-  float: left;
-
-  margin-right: 10px;
-
-  min-width: 60px;
-  padding: 0 10px;
-
-  height: 100%;
-
-  border-radius: 4px;
-
-  // animation:
-  transition-duration: 0.1s;
-}
-
-.navbar .links li:hover {
-  background-color: rgba(black, 10%);
-  border-radius: 4px;
-}
-
-.navbar .links .active {
-  background-color: rgba(black, 5%);
-}
-
-.navbar .current-user {
-  flex: 1 1 auto;
-}
-
-// logo:
-.logo {
-  
+    li {
+      padding: 10px 15px;
+    }
+  }
 }
