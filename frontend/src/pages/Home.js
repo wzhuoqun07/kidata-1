@@ -3,8 +3,6 @@ function MainPage() {
     <div className="home">
       <div className="page-card">
         <h1>Let's to play now!</h1>
-
-
       </div>
         <div className="search-bar">
             <input id="search-button" name="search_submit" type="submit" value="Search"></input>

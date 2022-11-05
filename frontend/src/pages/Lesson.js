@@ -8,36 +8,35 @@ function Lesson() {
                     <h1>
                         Welcome to KIDATA's lessons
                     </h1>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <br/><br/><br/>
                     <p>
                         Based on this content, you can learn more interesting skills.</p>
                     <br/>
-                    <p>
-                        If you are tired of playing games, it will be a good choice to read them.
-                    </p>
                 </div>
                 <div className="lesson-menu">
-                    <NavLink to={"/Lesson/BasicGraph"}>Basic Graph</NavLink>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <li><a href={null}><strong>???</strong></a></li>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <li><a href={null}><strong>???</strong></a></li>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <li><a href={null}><strong>???</strong></a></li>
+                    <h1>Menu</h1>
+                    <br/>
+                    <ul style={{listStyleType: "none"}}>
+                        <li>
+                            <NavLink to={"/Lesson/Grade1"} style={{textDecoration: "none", color: "black"}}>
+                                <strong>Grade1</strong>
+                            </NavLink>
+                        </li>
+                        <br/><br/><br/>
+                        <li>
+                            <NavLink to={"/Lesson/Grade2"} style={{textDecoration: "none", color: "black"}}>
+                                <strong>Grade2</strong>
+                            </NavLink>
+                        </li>
+                        <br/><br/><br/>
+                        <li>
+                            <NavLink to={"/Lesson/Grade3"} style={{textDecoration: "none", color: "black"}}>
+                                <strong>Grade3</strong>
+                            </NavLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
         </div>
     );
 }
