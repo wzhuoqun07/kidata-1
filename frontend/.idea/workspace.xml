@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe81b3a6-d933-447c-bd34-8fe3588bda24" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/Feedback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/UserHistory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/MySQLManipulation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/MySQLManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/MySQLManipulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Slides.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Slides.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/src/main/java/tables/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/AppNew.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/old/MySQLManipulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/old/MySQLManipulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Feedback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Lesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Lesson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Slides.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Slides.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/TableManipulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/kidataMaven/target/classes/tables/UserHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/kidata/src/main/java/tables/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/kidata/src/main/java/tables/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BasicGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BasicGraph.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +27,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/OneDrive - Virginia Tech/Desktop/kidata",
+    "last_opened_file_path": "C:/Users/sahit/Desktop/test web/kidata/frontend",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -71,6 +49,7 @@
       <workItem from="1667437763481" duration="168000" />
       <workItem from="1667438036871" duration="2606000" />
       <workItem from="1667506654132" duration="71000" />
+      <workItem from="1667668086148" duration="419000" />
     </task>
     <servers />
   </component>

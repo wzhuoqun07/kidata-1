@@ -36,26 +36,38 @@ function Menu() {
 }
 
 function FetchTest() {
-    const [name, setName] = React.useState('');
+    const [uid, setUid] = React.useState('');
     const [age, setAge] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [first_name, setFirst] = React.useState('');
+    const [last_name, setLast] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [type, setType] = React.useState('');
+    const [points, setPoints] = React.useState('');
     const updateState = (name, age) => {
-        setName(name);
+        setUid(uid);
         setAge(age);
+        setPassword(password);
+        setFirst(first_name);
+        setLast(last_name)
+        setEmail(email)
+        setType(type)
+        setPoints(points)
     }
 
     const getInfo = () => {
-        const url = `http://localhost:8080/fetch`;
+        const url = `http://localhost:8080/test1`;
 
         fetch(url)
         .then(response => response.json())
-            .then((({name: name1, age: age1}) => updateState(name1, age1)))
+            .then((({uid: uid, age: age}) => updateState(uid, age)))
     }
 
     return (
         <div style={{textAlign: "center", fontFamily: "Times New Roman, Times, serif"}}>
             <button style={{fontSize: "1vw"}} onClick={getInfo}>Get Image</button>
             <br/>
-            <h2>Name: {name}</h2>
+            <h2>Uid: {uid}</h2>
             <h2>Age: {age}</h2>
 
         </div>

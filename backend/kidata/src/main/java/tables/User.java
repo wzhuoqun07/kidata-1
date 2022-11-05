@@ -53,7 +53,7 @@ public class User {
 
     @SuppressWarnings("unchecked")
     public JSONObject pull(String val) throws SQLException, JSONException {
-        StringBuilder sql = new StringBuilder("Select * From users where uid = "
+        StringBuilder sql = new StringBuilder("Select * From users where login = "
             + val);
         ResultSet rs = ((Statement)c.createStatement()).executeQuery(sql
             .toString());
