@@ -10,7 +10,7 @@ $base-shadow-properties: rgba(0, 0, 0, 0.8) 0px 0px 4px;
 
 // what kinds of mixins would be useful?:
 @mixin rounding {
-  border-radius: 6px
+  border-radius: 12px;
 }
 
 @mixin shadow {
