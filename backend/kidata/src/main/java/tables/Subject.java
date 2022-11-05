@@ -1,4 +1,4 @@
-package kidata.tables;
+package tables;
 
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;

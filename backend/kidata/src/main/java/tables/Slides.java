@@ -1,4 +1,4 @@
-package kidata.tables;
+package tables;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

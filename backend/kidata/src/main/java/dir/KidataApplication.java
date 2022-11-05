@@ -1,6 +1,5 @@
-package kidata.dir;
+package dir;
 
-import kidata.tables.MySQLManipulation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +10,6 @@ public class KidataApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(KidataApplication.class, args);
-        MySQLManipulation m = new MySQLManipulation();
 
     }
 
