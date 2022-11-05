@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavbarLink(props) {
+  const location = useLocation();
+  const destination = props.to;
+  
+  let styling = ""
+  if (location.pathname === destination) {
+    styling = "active"
+  }
+  
   return (
-    <Link to={props.to}>
-      <li>
+    // TODO: i want to replace this with a NavLink, but there is overlap between
+    // any location & the '/' location
+    <Link to={destination}>
+      <li className={styling}>
         {/* add icon? */}
         <h3>{props.text}</h3>
       </li>
