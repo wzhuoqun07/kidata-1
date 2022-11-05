@@ -4,7 +4,7 @@ function NavbarLink(props) {
   return (
     <Link to={props.to}>
       <li>
-        {props.text}
+        <h4>{props.text}</h4>
       </li>
     </Link>
   )
