@@ -8,7 +8,7 @@ function PageLayout() {
     <>
       <Header />
       
-      <div id="content">
+      <div className="page-content">
         <Outlet />
       </div>
       
