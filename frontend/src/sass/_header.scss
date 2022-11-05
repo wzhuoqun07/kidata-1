@@ -24,12 +24,18 @@ $container-padding: 35px;
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
+  @include base.vertically-center;
 
   height: 60%;
 
   padding: 0 10px;
+}
+
+.header-content > .logo {
+  margin-right: 10px;
+  
+  height: 100%;
+  width: auto;
 }
 
 .navbar {
@@ -51,19 +57,30 @@ $container-padding: 35px;
 }
 
 .navbar .links li {
-  display: flex;
-  // TODO: should i make these mixins?:
-  align-items: center;
-  justify-content: center;
+  @include base.vertically-center;
   
   float: left;
 
-  margin-right: 20px;
+  margin-right: 10px;
 
   min-width: 60px;
   padding: 0 10px;
 
   height: 100%;
+
+  border-radius: 4px;
+
+  // animation:
+  transition-duration: 0.1s;
+}
+
+.navbar .links li:hover {
+  background-color: rgba(black, 10%);
+  border-radius: 4px;
+}
+
+.navbar .links .active {
+  background-color: rgba(black, 5%);
 }
 
 .navbar .current-user {
