@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <div id="footer" className="footer">
-      <h2 className="copyright">© ISF2022</h2>
+      <h3 className="copyright">© ISF2022</h3>
     </div>
   )
 }
