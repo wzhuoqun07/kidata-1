@@ -41,6 +41,11 @@ $page-horizontal-margin: 20%;
 
   flex-flow: column;
   justify-content: center;
+
+  .title {
+    font-size: 40px;
+    color: base.$color-primary;
+  }
 }
 
 .home .hero {
@@ -60,11 +65,6 @@ $page-horizontal-margin: 20%;
     margin-left: 20px;
     
     * { text-align: right; } 
-
-    .title {
-      font-size: 40px;
-      color: base.$color-primary;
-    }
 
     .hero-nav {
       list-style-type: none;
@@ -89,4 +89,8 @@ $page-horizontal-margin: 20%;
       }
     }
   }
+}
+
+.home .welcome {
+  margin-top: 80px;
 }

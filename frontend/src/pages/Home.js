@@ -1,5 +1,5 @@
-import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
+import Markdown from "markdown-to-jsx";
 
 function HeroLink(props) {
   return (
@@ -31,9 +31,21 @@ function Home() {
         </div>
       </div>
       
-      <div className="split-container">
+      <div className="split-container welcome">
+        <div>
+          <h1 className="title">Welcome!</h1>
+          <p>
+            KIDATA is a learning platform designed to teach kids about data 
+            science in a way that appeals to them.  
+          </p>
+        </div>
+        <div>
 
+        </div>
       </div>
+
+      {/* temporary: */}
+      <span style={{"padding-bottom": "400px"}} />
     </div>
   )
 }
