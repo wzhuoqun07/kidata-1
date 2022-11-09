@@ -7,6 +7,7 @@ import {
 import PageLayout from "./components/PageLayout";
 
 import Home from "./pages/Home"
+import About from "./pages/About";
 import Error from "./pages/Error";
 
 const router = createBrowserRouter(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
     // root pages:
     <Route path="/" element={<PageLayout />}>
       <Route index element={<Home />} />
+      <Route path="/about" element={<About />} />
 
       {/* error page: */}
       <Route path="*" element={<Error />} />
