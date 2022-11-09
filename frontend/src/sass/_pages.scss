@@ -1,7 +1,7 @@
 @use "base";
 @use "footer";
 
-$page-horizontal-margin: 20%;
+$page-horizontal-margin: 25%;
 
 // flexbox to handle body content sizing:
 .page-container {
@@ -93,4 +93,40 @@ $page-horizontal-margin: 20%;
 
 .home .welcome {
   margin-top: 80px;
+}
+
+.error-page {
+  display: flex;
+  
+  align-items: center;
+  flex-flow: column;
+
+  * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px;
+    color: base.$color-primary;
+  }
+
+  .to-home {
+    @include base.primary-box;
+    @include base.rounding;
+    
+    padding: 10px 15px;
+    margin: 10px 0;
+    
+    width: auto;
+
+    // animation:
+    transition-duration: 0.1s;
+  }
+
+  .to-home:hover {
+    background-color: white;
+    
+    * { color: base.$color-primary }
+  }
 }
