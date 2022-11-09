@@ -12,12 +12,12 @@
 
 body { @include font-body; }   
 
-p { 
+p, h3, h4, h5, h6 { 
     @include font-body;
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     @include font-header;
     margin: 0;
 }
