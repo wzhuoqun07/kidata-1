@@ -1,4 +1,16 @@
-import { Link } from "react-router-dom";
+import {NavLink} from "react-router-dom";
+
+const activeStyle = {
+    color: 'red',
+    borderBottom: '1em, solid, black',
+    textDecoration: 'none'
+}
+
+const inactive = {
+    color: 'black',
+    borderBottom: '1em, solid, black',
+    textDecoration: 'none'
+}
 
 function NavbarLink(props) {
   return (
