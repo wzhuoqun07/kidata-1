@@ -96,6 +96,13 @@ public class Controller extends WebMvcConfigurerAdapter {
     public String check(@PathVariable("what") String what, @PathVariable("text") String text) throws SQLException, JSONException {
         MySQLManipulation ms = new MySQLManipulation();
         User us = new User(ms.getConnection());
+        String [] arr = text.split("-");
+        String s = "";
+        switch(what){
+            case "login": s = us.check(arr[0], arr[1]); break;
+            case "profile": s = us.checkExists(arr[0]); break;
+        }
+        return s;
     }
 
     public String feedback(String id, String table, String[] arr, @NotNull String instruction) throws SQLException {

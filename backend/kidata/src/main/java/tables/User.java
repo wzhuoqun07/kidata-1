@@ -83,7 +83,7 @@ public class User {
 
 
     // possible chance of error due to not using while loop
-    public boolean check(String username, String password) throws SQLException {
+    public String check(String username, String password) throws SQLException {
         StringBuilder sql = new StringBuilder(
             "Select * From kidata.users where login = '" + username + "'");
         Statement s = (Statement)c.createStatement();
@@ -95,10 +95,24 @@ public class User {
             pass = rs.getString("password");
         }
         if (pass.compareTo(password) == 0) {
-            return true;
+            return "true";
         }
-        return false;
+        return "false";
     }
+
+    public String checkExists(String username) throws SQLException {
+        StringBuilder sql = new StringBuilder(
+                "Select * From kidata.users where login = '" + username + "'");
+        Statement s = (Statement)c.createStatement();
+        System.out.println(sql);
+
+        ResultSet rs = s.executeQuery(sql.toString());
+        if(rs.next()){
+            return "false";
+        }
+        return "true";
+    }
+
 
 
     public void update(String[] vals) throws SQLException {
