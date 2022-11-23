@@ -100,7 +100,7 @@ public class Controller extends WebMvcConfigurerAdapter {
         String s = "";
         switch(what){
             case "login": s = us.check(arr[0], arr[1]); break;
-            case "profile": s = us.checkExists(arr[0]); break;
+            case "username": s = us.checkExists(arr[0]); break;
         }
         return s;
     }
