@@ -36,16 +36,16 @@ $page-horizontal-margin: 25%;
   }
 }
 
+.title {
+  font-size: 40px;
+  color: base.$color-primary;
+}
+
 .home {
   display: flex;
 
   flex-flow: column;
   justify-content: center;
-
-  .title {
-    font-size: 40px;
-    color: base.$color-primary;
-  }
 }
 
 .home .hero {
@@ -93,6 +93,18 @@ $page-horizontal-margin: 25%;
 
 .home .welcome {
   margin-top: 80px;
+}
+
+.lessons {
+
+
+  .lesson-list {
+
+
+    > .lesson-card {
+
+    }
+  }
 }
 
 .error-page {
