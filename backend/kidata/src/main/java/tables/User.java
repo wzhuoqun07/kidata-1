@@ -77,6 +77,7 @@ public class User {
             int points = rs.getInt("points");
             item.put("points", points);
         }
+        System.out.println(item);
         return item;
     }
 

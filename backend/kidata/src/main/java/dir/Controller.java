@@ -35,9 +35,73 @@ public class Controller extends WebMvcConfigurerAdapter {
     @RequestMapping("/pull/{table}/{id}")
     public String pull(@PathVariable("id") String id, @PathVariable("table") String table) throws SQLException, JSONException {
     String s = "false";
-
-    return s;
+    String [] arr ={};
+        System.out.println(table);
+        System.out.println(id);
+    switch (table){
+        case "lesson": s = lesson(id, table, arr, "pull"); break;
+        case "slides": s = slides(id, table, arr, "pull"); break;
+        case "user": s = user(id, table, arr, "pull"); break;
+    }
+        return s;
     }
 
+    public String feedback(String id, String table, String[] arr, String instruction) throws SQLException {
+        String s = "";
+        MySQLManipulation ms = new MySQLManipulation();
+        Feedback temp = new Feedback(ms.getConnection());
+        switch (instruction){
+            case "insert": temp.insert(arr); s = "true"; break;
+            case "delete": temp.delete(id); s = "true"; break;
+        }
+        return s;
+    }
 
+    public String lesson(String id, String table, String[] arr, String instruction) throws SQLException, JSONException {
+        String s = "";
+        MySQLManipulation ms = new MySQLManipulation();
+        Lesson temp = new Lesson(ms.getConnection());
+        switch (instruction){
+            case "insert": temp.insert(arr); s = "true"; break;
+            case "delete": temp.delete(id); s = "true"; break;
+            case "update": temp.update(arr); s = "true"; break;
+            case "pull": s = temp.pull(id).toString(); break;
+        }
+        return s;
+    }
+
+    public String slides(String id, String table, String[] arr, String instruction) throws SQLException, JSONException {
+        String s = "";
+        MySQLManipulation ms = new MySQLManipulation();
+        Slides temp = new Slides(ms.getConnection());
+       switch (instruction){
+            case "insert": temp.insert(arr); s = "true"; break;
+            case "delete": temp.delete(id); s = "true"; break;
+            case "update": temp.update(arr); s = "true"; break;
+            case "pull": s = temp.pull(id).toString(); break;
+        }
+        return s;
+    }
+
+    public String user (String id, String table, String[] arr, String instruction) throws SQLException, JSONException {
+        String s = "";
+        System.out.println("here");
+        MySQLManipulation ms = new MySQLManipulation();
+        User temp = new User(ms.getConnection());
+        switch (instruction) {
+            case "insert": temp.insert(arr); s = "true"; break;
+            case "delete": temp.delete(id); s = "true"; break;
+            case "update": temp.update(arr); s = "true"; break;
+            case "pull": s = temp.pull(id).toString(); break;
+        }
+        return s;
+    }
+
+    public String userhistory (String id, String table, String[] arr, String instruction) throws SQLException, JSONException {
+        MySQLManipulation ms = new MySQLManipulation();
+        UserHistory temp = new UserHistory(ms.getConnection());
+        temp.insert(arr);
+        String s = "true";
+        return s;
+    }
 }

@@ -73,7 +73,7 @@ public class Slides {
 
     @SuppressWarnings("unchecked")
     public JSONObject pull(String val) throws SQLException, JSONException {
-        StringBuilder sql = new StringBuilder("Select * From slides where id = "
+        StringBuilder sql = new StringBuilder("Select * From slides where lesson_id = "
             + val);
         Statement s = (Statement)c.createStatement();
         System.out.println(sql);
@@ -86,15 +86,8 @@ public class Slides {
             item.put("id", id);
             int lesson_id = rs.getInt("lesson_id");
             item.put("lesson_id", lesson_id);
-            String text = rs.getString("text");
-            item.put("text", text);
-            String image = rs.getString("image");
-            item.put("image", image);
-            String hint = rs.getString("hint");
-            item.put("hint", hint);
-            String title = rs.getString("title");
-            item.put("title", title);
-
+            String text = rs.getString("markdown");
+            item.put("markdown", text);
         }
 
         return item;

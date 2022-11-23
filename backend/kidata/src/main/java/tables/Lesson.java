@@ -72,8 +72,8 @@ public class Lesson {
         while (rs.next()) {
             int id = rs.getInt("id");
             item.put("id", id);
-            int subjectid = rs.getInt("subject_id");
-            item.put("subject_id", subjectid);
+            String subjectid = rs.getString("subject");
+            item.put("subject", subjectid);
             String name = rs.getString("name");
             item.put("name", name);
         }
