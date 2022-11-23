@@ -52,8 +52,8 @@ public class Lesson {
 
 
     public void update(String[] vals) throws SQLException {
-        StringBuilder sql = new StringBuilder("UPDATE lesson SET " + vals[2]);
-        sql.append(" = '" + vals[3] + "' WHERE( id = " + vals[4] + ");");
+        StringBuilder sql = new StringBuilder("UPDATE lesson SET " + vals[0]);
+        sql.append(" = '" + vals[1] + "' WHERE( id = " + vals[2] + ");");
         System.out.println(sql);
         c.createStatement().execute(sql.toString());
     }

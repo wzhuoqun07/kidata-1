@@ -103,7 +103,7 @@ public class User {
 
     public void update(String[] vals) throws SQLException {
         StringBuilder sql = new StringBuilder("UPDATE users SET ");
-        for (int i = 2; i < vals.length - 1; i = i + 2) {
+        for (int i = 0; i < vals.length - 1; i = i + 2) {
 
             sql.append(vals[i]).append(" = ");
             sql.append("'").append(vals[i + 1]).append("'");

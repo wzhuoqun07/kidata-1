@@ -36,13 +36,42 @@ public class Controller extends WebMvcConfigurerAdapter {
     public String pull(@PathVariable("id") String id, @PathVariable("table") String table) throws SQLException, JSONException {
     String s = "false";
     String [] arr ={};
-        System.out.println(table);
+        System.out.print(table);
         System.out.println(id);
     switch (table){
         case "lesson": s = lesson(id, table, arr, "pull"); break;
         case "slides": s = slides(id, table, arr, "pull"); break;
         case "user": s = user(id, table, arr, "pull"); break;
     }
+        return s;
+    }
+
+    @RequestMapping("delete/{table}/{id}")
+    public String delete(@PathVariable("id") String id, @PathVariable("table") String table) throws SQLException, JSONException {
+        String s = "true";
+        String [] arr ={};
+        System.out.print(table);
+        System.out.println(id);
+        switch (table){
+            case "lesson": lesson(id, table, arr, "delete"); break;
+            case "slides": slides(id, table, arr, "delete"); break;
+            case "user": user(id, table, arr, "delete"); break;
+            case "feedback": feedback(id, table, arr, "delete"); break;
+        }
+        return s;
+    }
+
+    @RequestMapping("update/{table}/{info}")
+    public String update(@PathVariable("table") String table, @PathVariable("info") String info) throws SQLException, JSONException {
+        String s = "true";
+        String [] arr = info.split("-");
+        System.out.print(table);
+        String id = null;
+        switch (table){
+            case "lesson": lesson(id, table, arr, "update"); break;
+            case "slides": slides(id, table, arr, "update"); break;
+            case "user": user(id, table, arr, "update"); break;
+        }
         return s;
     }
 
