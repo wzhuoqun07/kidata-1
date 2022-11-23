@@ -1,5 +1,6 @@
 package dir;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.context.annotation.Configuration;
@@ -75,7 +76,29 @@ public class Controller extends WebMvcConfigurerAdapter {
         return s;
     }
 
-    public String feedback(String id, String table, String[] arr, String instruction) throws SQLException {
+    @RequestMapping("push/{table}/{info}")
+    public String insert(@PathVariable("table") String table, @PathVariable("info") String info) throws SQLException, JSONException {
+        String s = "true";
+        String [] arr = info.split("-");
+        System.out.print(table);
+        String id = null;
+        switch (table){
+            case "lesson": lesson(id, table, arr, "insert"); break;
+            case "slides": slides(id, table, arr, "insert"); break;
+            case "user": user(id, table, arr, "insert"); break;
+            case "feedback": feedback(id, table, arr, "insert"); break;
+            case "userhistory": userhistory(id, table, arr, "insert"); break;
+        }
+        return s;
+    }
+
+    @RequestMapping("check/{what}/{text}")
+    public String check(@PathVariable("what") String what, @PathVariable("text") String text) throws SQLException, JSONException {
+        MySQLManipulation ms = new MySQLManipulation();
+        User us = new User(ms.getConnection());
+    }
+
+    public String feedback(String id, String table, String[] arr, @NotNull String instruction) throws SQLException {
         String s = "";
         MySQLManipulation ms = new MySQLManipulation();
         Feedback temp = new Feedback(ms.getConnection());
