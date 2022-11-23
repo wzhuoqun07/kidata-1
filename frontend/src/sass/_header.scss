@@ -1,0 +1,36 @@
+@use "base";
+@use "pages";
+
+// id for container -- may cause confusion?
+.header {
+  height: 180px;
+
+  box-sizing: border-box;
+  padding: 20px pages.$page-horizontal-margin;
+}
+
+.header #logo {
+  height: 100%;
+  width: auto;
+}
+
+// generally just a container for a ul:
+.navbar {
+  @include base.primary-box;
+  @include base.rounding;
+
+  float: right;
+
+  ul {
+    @include base.vertically-center;
+
+    list-style-type: none;
+
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      padding: 10px 15px;
+    }
+  }
+}

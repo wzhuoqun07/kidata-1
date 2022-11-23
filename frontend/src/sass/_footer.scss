@@ -1,22 +1,30 @@
 @use "base";
 
-$footer-height: 70px;
+$footer-height: 60px;
 
 .footer {
   @include base.primary-box;
+  @include base.vertically-center;
 
   height: 100%;
   
-  padding: 0 20px;
+  padding: 0 25%;
 }
 
 .footer .copyright {
-
-  padding: 1em 0;
-  display: inline-block;
   opacity: 50%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
+}
+
+.footer ul {
+  @include base.vertically-center;
+  
+  // align to right:
+  margin-left: auto;
+  margin-right: 0;
+  
+  list-style-type: none;
+
+  li {
+    padding-left: 15px;
+  }
 }

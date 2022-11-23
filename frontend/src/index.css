@@ -7,9 +7,4 @@ body {
 	padding: 0;
 	
 	font-family: sans-serif;
-	
-	background-color: skyblue;
-	/* gradient styling: */
-	background-image: linear-gradient(skyblue, deepskyblue);
-	background-attachment: fixed;
 }

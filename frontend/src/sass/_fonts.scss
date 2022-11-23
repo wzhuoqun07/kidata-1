@@ -1,12 +1,23 @@
-// Hind & Montserrat
-@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
-@mixin hind {
-    font-family: "Maiandra GD", sans-serif;
+@mixin font-body {
+    font-family: "Quicksand", sans-serif;
     font-weight: normal,
 }
 
-@mixin montserrat {
-    font-family: "Maiandra GD", sans-serif;
-    font-weight: normal;
+@mixin font-header {
+    font-family: "Quicksand", sans-serif; 
+    font-weight: 700;
+}
+
+body { @include font-body; }   
+
+p, h3, h4, h5, h6 { 
+    @include font-body;
+    margin: 0;
+}
+
+h1, h2 {
+    @include font-header;
+    margin: 0;
 }
