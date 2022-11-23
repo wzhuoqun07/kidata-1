@@ -27,7 +27,7 @@ public class Feedback {
 
         StringBuilder sql = new StringBuilder(
             "INSERT IGNORE INTO feedback VALUES ('" + index + "',");
-        for (int i = 2; i < vals.length; i++) {
+        for (int i = 0; i < vals.length; i++) {
             sql.append("'").append(vals[i]).append("'");
             if (i != vals.length - 1) {
                 sql.append(", ");

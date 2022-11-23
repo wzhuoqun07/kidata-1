@@ -31,7 +31,7 @@ public class Slides {
 
         StringBuilder sql = new StringBuilder(
             "INSERT IGNORE INTO slides VALUES ('" + index + "',");
-        for (int i = 2; i < vals.length; i++) {
+        for (int i = 0; i < vals.length; i++) {
             sql.append("'").append(vals[i]).append("'");
             if (i != vals.length - 1) {
                 sql.append(", ");
@@ -45,7 +45,7 @@ public class Slides {
 
 
     public void delete(String val) throws SQLException {
-        StringBuilder sql = new StringBuilder("DELETE FROM slides WHERE ( id = "
+        StringBuilder sql = new StringBuilder("DELETE FROM slides WHERE ( lesson_id = "
             + val + ");");
         System.out.println(sql);
         c.createStatement().execute(sql.toString());

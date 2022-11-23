@@ -4,6 +4,7 @@ import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -24,37 +25,18 @@ public class Controller extends WebMvcConfigurerAdapter {
         super();
         System.out.println("Controller");
     }
-    @RequestMapping("/hello")
-    public String Hello() {
-        return "Hello";
-    }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedOrigins("*");
     }
 
-    @RequestMapping("/fetch")
-    @CrossOrigin(origins = "http://localhost:8080/fetch")
-    public String fetchUser(String id) {
-        JSONObject user = new JSONObject();
-        try {
-            user.put("id", id);
-            user.put("name", "John");
-            user.put("age", "20");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return user.toString();
-    }
 
-    @RequestMapping("/test1")
-    @CrossOrigin(origins = "http://localhost:8080/test1")
-    public String testUser() throws SQLException, JSONException {
-        MySQLManipulation ms = new MySQLManipulation();
-        User user = new User(ms.getConnection());
-       return user.pull("1").toString();
+    @RequestMapping("/pull/{table}/{id}")
+    public String pull(@PathVariable("id") String id, @PathVariable("table") String table) throws SQLException, JSONException {
+    String s = "false";
 
+    return s;
     }
 
 
