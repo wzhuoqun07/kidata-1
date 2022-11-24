@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;900&display=swap');
 
 @mixin font-body {
     font-family: 'Montserrat', sans-serif;
@@ -9,9 +9,7 @@
 @mixin font-header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #4f2d03;
-
+    
 }
 
 body { @include font-body; }   
@@ -23,7 +21,15 @@ p, h3, h4, h5, h6 {
 
 }
 
-h1, h2 {
+h1{
+    @include font-header;
+    margin: 0;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+h2{
     @include font-header;
     margin: 0;
 }
