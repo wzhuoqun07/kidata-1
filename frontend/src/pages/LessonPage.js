@@ -1,27 +1,31 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function LessonPage(props) {
-  const { id } = useParams();
+import Markdown from "markdown-to-jsx";
 
-  const [ content, setContent ] = useState("");
+function LessonPage() {
+  const { id } = useParams();
+  
+  const [ content, setContent ] = useState(null);
+  // const [ didFail, setFailure ] = useState(false);
 
   useEffect(() => {
-    async function getContent() {
-      const response = await fetch("http://localhost:8080/pull/slides/" + id);
-      const content = await response.json();
+    fetch("http://localhost:8080/pull/slides/" + id)
+      .then(response => response.json())
+      // apply lesson content:
+      .then(body => {
+        if (!body.markdown)
+          console.log("Uh oh.");
 
-      console.log("Got content:", content);
-  
-      setContent(content);
-    }
-
-    getContent()
+        setContent(body.markdown);
+      })
       .catch(reason => console.log(reason));
   });
 
   return (
-    <></>
+    <div>
+      { content ? <Markdown children={ content } /> : <h2>Loading...</h2> }
+    </div>
   )
 }
 
