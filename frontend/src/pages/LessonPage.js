@@ -7,12 +7,18 @@ function LessonPage(props) {
   const [ content, setContent ] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8080/pull/slides/" + id)
-      .then(response => {
-        console.log(response.json());
-      })
-      .catch(ctx => console.error(ctx));
-  })
+    async function getContent() {
+      const response = await fetch("http://localhost:8080/pull/slides/" + id);
+      const content = await response.json();
+
+      console.log("Got content:", content);
+  
+      setContent(content);
+    }
+
+    getContent()
+      .catch(reason => console.log(reason));
+  });
 
   return (
     <></>
