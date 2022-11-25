@@ -142,3 +142,11 @@ $page-horizontal-margin: 25%;
     * { color: base.$color-primary }
   }
 }
+
+.markdown-content {
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

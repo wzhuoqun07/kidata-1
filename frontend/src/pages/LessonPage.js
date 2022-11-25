@@ -3,11 +3,19 @@ import { useEffect, useState } from "react";
 
 import Markdown from "markdown-to-jsx";
 
+function FetchError() {
+  return (
+    <div>
+      A not-so-pretty error screen. Something went wrong.
+    </div>
+  )
+}
+
 function LessonPage() {
   const { id } = useParams();
-  
+
   const [ content, setContent ] = useState(null);
-  // const [ didFail, setFailure ] = useState(false);
+  const [ failure, setFailure ] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8080/pull/slides/" + id)
@@ -19,12 +27,15 @@ function LessonPage() {
 
         setContent(body.markdown);
       })
-      .catch(reason => console.log(reason));
+      .catch(reason => {
+        setFailure(true);
+        console.log(reason);
+      });
   });
 
   return (
-    <div>
-      { content ? <Markdown children={ content } /> : <h2>Loading...</h2> }
+    <div className="markdown-content">
+      {content ? <Markdown children={content} /> : <FetchError/>}
     </div>
   )
 }
