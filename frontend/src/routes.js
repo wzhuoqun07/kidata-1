@@ -9,7 +9,9 @@ import PageLayout from "./components/PageLayout";
 import Home from "./pages/Home"
 import About from "./pages/About";
 import Error from "./pages/Error";
+
 import Lessons from "./pages/Lessons";
+import LessonPage from "./pages/LessonPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements([
@@ -19,6 +21,8 @@ const router = createBrowserRouter(
       
       <Route path="/about" element={<About />} />
       <Route path="/lessons" element={<Lessons />} />
+      {/* individual lessons: */}
+      <Route path="/lessons/:id" element={<LessonPage />} />
 
       {/* error page: */}
       <Route path="*" element={<Error />} />
