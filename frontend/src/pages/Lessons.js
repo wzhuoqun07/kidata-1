@@ -19,7 +19,8 @@ function Lessons() {
   return (
     <div className="lessons">
       <h1 className="title">Lessons</h1>
-      
+
+      {/* TODO: add links for each individual lesson */}
     </div>
   )
 }

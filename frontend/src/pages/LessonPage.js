@@ -3,13 +3,6 @@ import { useEffect, useState } from "react";
 
 import Markdown from "markdown-to-jsx";
 
-const overrides = {
-  img: {
-    "max-width": "100%",
-    height: "auto"
-  }
-}
-
 function QuizChoice(props) {
   return (
     <li>
@@ -56,7 +49,7 @@ function LessonContent(props) {
 
   return (
     <>
-      <Markdown children={ props.markdown } overrides={ overrides } />
+      <Markdown className="markdown" children={ props.markdown } />
       {/* if we don't have a quiz, just don't render anything here: */}
       { choices }
     </>

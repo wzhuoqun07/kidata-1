@@ -108,6 +108,11 @@ $page-horizontal-margin: 25%;
   .status {
     @include base.horizontally-center;
   }
+
+  .markdown img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .error-page {
