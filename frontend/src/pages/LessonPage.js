@@ -59,6 +59,8 @@ function LessonPage() {
   const { id } = useParams();
 
   const [ content, setContent ] = useState(null);
+  const [ quiz, setQuiz ] = useState(null);
+
   const [ failure, setFailure ] = useState(false);
   
   useEffect(() => {
@@ -67,11 +69,13 @@ function LessonPage() {
       // apply lesson content:
       .then(body => {
         // if we have no markdown, need to invoke an error:
-        if (!body.markdown)
+        const markdown = body.markdown;
+        if (!markdown)
           // invoke the .catch:
-          throw "Didn't receive markdown body from server.";
+          throw new Error("Did not receieve markdown body from server.");
         
-        setContent(body.markdown);
+        setQuiz(body.quiz); // may or may not exist, but this is OK
+        setContent(markdown);
       })
       .catch(reason => {
         setFailure(true);
@@ -81,7 +85,11 @@ function LessonPage() {
 
   return (
     <div className="markdown-content">
-      
+      <LessonContent
+        markdown={content || "Loading..."}
+        // rely on quiz being falsy here:
+        quiz={quiz}
+      />
     </div>
   )
 }
