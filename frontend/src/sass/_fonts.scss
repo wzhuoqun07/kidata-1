@@ -16,12 +16,14 @@ body { @include font-body; }
 
 p, h3, h4, h5, h6 { 
     @include font-body;
-    font-family: 'Montserrat-Medium', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
 
 }
 
-h1{
+
+
+.title{
     @include font-header;
     margin: 0;
     text-shadow: -1px 1px 0 #000,
