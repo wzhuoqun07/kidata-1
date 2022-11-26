@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 
 import Markdown from "markdown-to-jsx";
 
+const ASCII_A = 'A'.charCodeAt(0);
+
 function QuizChoice(props) {
   return (
     <li>
       <button
         // this needs some revision; may want to elevate this to be at the same
         // level as the component  
-        onClick={event => props.onClick(event)}
+        onClick={() => props.onClick()}
       >
         { props.text }
       </button>
@@ -19,7 +21,9 @@ function QuizChoice(props) {
 
 function QuizQuestion(props) {
   const { question, choices, answer } = props.content;
-  
+
+  const [ wasClicked, setClicked ] = useState(false);
+
   return (
     <div>
       <h1>{ question }</h1>
@@ -29,7 +33,11 @@ function QuizQuestion(props) {
         choices.map((choice, i) => (
           // ...and return a div for each array entry:
           <QuizChoice 
-            text={ `${String.fromCharCode(parseInt('A') + i)}. ${choice}` }
+            className={ wasClicked ? (answer == choice ? "success" : "danger") : "" }
+            text={ `${String.fromCharCode(ASCII_A + i)}. ${choice}` }
+            onClick={() => {
+              setClicked(true);
+            }}
           />
         ))
       }
