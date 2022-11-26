@@ -3,6 +3,13 @@ import { useEffect, useState } from "react";
 
 import Markdown from "markdown-to-jsx";
 
+const overrides = {
+  img: {
+    "max-width": "100%",
+    height: "auto"
+  }
+}
+
 function QuizChoice(props) {
   return (
     <li>
@@ -29,7 +36,7 @@ function QuizQuestion(props) {
         choices.map((choice, i) => (
           // ...and return a div for each array entry:
           <QuizChoice 
-            text={`${String.fromCharCode(parseInt('A') + i)}. ${choice}`}
+            text={ `${String.fromCharCode(parseInt('A') + i)}. ${choice}` }
           />
         ))
       }
@@ -49,10 +56,19 @@ function LessonContent(props) {
 
   return (
     <>
-      <Markdown children={ props.markdown } />
+      <Markdown children={ props.markdown } overrides={ overrides } />
       {/* if we don't have a quiz, just don't render anything here: */}
       { choices }
     </>
+  )
+}
+
+// status screens:
+function FetchLoading() {
+  return (
+    <div className="lesson">
+
+    </div>
   )
 }
 
@@ -91,15 +107,24 @@ function LessonPage() {
         setFailure(true);
         console.log(reason);
       });
-  });
+  }, []);
 
+  let renderElement = <FetchLoading />
+  
+  // is there a better way to do this?:
+  if (failure) {
+    renderElement = <FetchError />
+  } else if (content) {
+    renderElement = <LessonContent
+      markdown={ content }
+      // rely on quiz being falsy here:
+      quiz={ quiz }
+    />
+  }
+  
   return (
-    <div className="markdown-content">
-      <LessonContent
-        markdown={content || "Loading..."}
-        // rely on quiz being falsy here:
-        quiz={quiz}
-      />
+    <div className="lesson-page">
+      { renderElement }
     </div>
   )
 }
