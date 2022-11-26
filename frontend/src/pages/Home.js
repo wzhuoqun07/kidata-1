@@ -16,7 +16,7 @@ function Home() {
     <div className="home">
       <div className="split-container hero">
         <div className="image-container">
-          <img src="/logo.jpg" />
+          <img src="logo.png" />
         </div>
         <div className="quickstart">
           <h1 className="title">
