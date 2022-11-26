@@ -74,7 +74,8 @@ function LessonPage() {
           // invoke the .catch:
           throw new Error("Did not receieve markdown body from server.");
         
-        setQuiz(body.quiz); // may or may not exist, but this is OK
+        body.quiz && setQuiz(JSON.stringify(body.quiz));
+
         setContent(markdown);
       })
       .catch(reason => {
