@@ -88,6 +88,8 @@ public class Slides {
             item.put("lesson_id", lesson_id);
             String text = rs.getString("markdown");
             item.put("markdown", text);
+            String quiz = rs.getString("quiz");
+            item.put("quiz", quiz);
         }
 
         return item;
