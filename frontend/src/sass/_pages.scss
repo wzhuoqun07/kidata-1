@@ -42,10 +42,7 @@ $page-horizontal-margin: 25%;
 }
 
 .home {
-  display: flex;
-
-  flex-flow: column;
-  justify-content: center;
+  @include base.horizontally-center;
 }
 
 .home .hero {
@@ -107,11 +104,14 @@ $page-horizontal-margin: 25%;
   }
 }
 
+.lesson-page {
+  .status {
+    @include base.horizontally-center;
+  }
+}
+
 .error-page {
-  display: flex;
-  
-  align-items: center;
-  flex-flow: column;
+  @include base.horizontally-center;
 
   * {
     width: 100%;
@@ -140,13 +140,5 @@ $page-horizontal-margin: 25%;
     background-color: white;
     
     * { color: base.$color-primary }
-  }
-}
-
-.markdown-content {
-  
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }

@@ -36,6 +36,12 @@ $base-shadow-properties: rgba(0, 0, 0, 0.8) 0px 0px 4px;
   align-items: center;
 }
 
+@mixin horizontally-center {
+  display: flex;
+
+  flex-flow: column;
+  justify-content: center;
+}
 
 body {
   background-color: $color-background;
