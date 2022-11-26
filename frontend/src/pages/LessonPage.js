@@ -91,7 +91,7 @@ function LessonPage() {
         setFailure(true);
         console.log(reason);
       });
-  });
+  }, []);
 
   return (
     <div className="markdown-content">
