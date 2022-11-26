@@ -9,7 +9,7 @@ import PageLayout from "./components/PageLayout";
 import Home from "./pages/Home"
 import About from "./pages/About";
 import Error from "./pages/Error";
-
+import Contact from "./pages/Contact"
 import Lessons from "./pages/Lessons";
 import LessonPage from "./pages/LessonPage"
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     // root pages:
     <Route path="/" element={<PageLayout />}>
       <Route index element={<Home />} />
-      
+      <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/lessons" element={<Lessons />} />
       {/* individual lessons: */}
