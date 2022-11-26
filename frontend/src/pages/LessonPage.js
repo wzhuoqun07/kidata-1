@@ -83,7 +83,7 @@ function LessonPage() {
           // invoke the .catch:
           throw new Error("Did not receieve markdown body from server.");
         
-        body.quiz && setQuiz(JSON.stringify(body.quiz));
+        body.quiz && setQuiz(JSON.parse(body.quiz));
 
         setContent(markdown);
       })
