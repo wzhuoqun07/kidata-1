@@ -33,7 +33,7 @@ function QuizQuestion(props) {
         choices.map((choice, i) => (
           // ...and return a div for each array entry:
           <QuizChoice 
-            className={ wasClicked ? (answer == choice ? "success" : "danger") : "" }
+            className={ wasClicked ? (answer === choice ? "success" : "danger") : "" }
             text={ `${String.fromCharCode(ASCII_A + i)}. ${choice}` }
             onClick={() => {
               setClicked(true);
