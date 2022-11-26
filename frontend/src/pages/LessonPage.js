@@ -17,9 +17,9 @@ function QuizChoice(props) {
   )
 }
 
-function QuizQuestions(props) {
-  const { question, choices, answer } = props.quiz;
-
+function QuizQuestion(props) {
+  const { question, choices, answer } = props.content;
+  
   return (
     <div>
       <h1>{ question }</h1>
@@ -38,11 +38,20 @@ function QuizQuestions(props) {
 }
 
 function LessonContent(props) {
+  const { quiz } = props;
+
+  let choices;
+  if (quiz) {
+    choices = quiz.map(content => (
+      <QuizQuestion content={content} />
+    ));
+  }
+
   return (
     <>
       <Markdown children={ props.markdown } />
       {/* if we don't have a quiz, just don't render anything here: */}
-      { props.quiz && <QuizQuestions quiz={props.quiz} /> }
+      { choices }
     </>
   )
 }
